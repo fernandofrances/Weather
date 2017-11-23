@@ -11,6 +11,18 @@
 		E05EEC851FC6FB18001B0601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05EEC841FC6FB18001B0601 /* Assets.xcassets */; };
 		E05EEC881FC6FB18001B0601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05EEC861FC6FB18001B0601 /* LaunchScreen.storyboard */; };
 		E05EEC981FC6FE5D001B0601 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EEC971FC6FE5D001B0601 /* Forecast.swift */; };
+		E05EEC9B1FC7048F001B0601 /* WebServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EEC9A1FC7048F001B0601 /* WebServiceConfiguration.swift */; };
+		E05EEC9D1FC70496001B0601 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EEC9C1FC70496001B0601 /* Endpoint.swift */; };
+		E05EEC9F1FC7049D001B0601 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EEC9E1FC7049D001B0601 /* WebService.swift */; };
+		E05EECA11FC704A6001B0601 /* WebServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECA01FC704A6001B0601 /* WebServiceAssembly.swift */; };
+		E05EECA51FC70CEE001B0601 /* MainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECA41FC70CEE001B0601 /* MainRepository.swift */; };
+		E05EECA71FC71E2E001B0601 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECA61FC71E2E001B0601 /* MainAssembly.swift */; };
+		E05EECAA1FC71E58001B0601 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECA91FC71E58001B0601 /* CoreAssembly.swift */; };
+		E05EECB01FC71E86001B0601 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECAF1FC71E86001B0601 /* MainPresenter.swift */; };
+		E05EECBA1FC7270F001B0601 /* ForecastSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECB91FC7270F001B0601 /* ForecastSection.swift */; };
+		E05EECBD1FC72BFE001B0601 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECBB1FC72BFE001B0601 /* MainViewController.swift */; };
+		E05EECBE1FC72BFE001B0601 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05EECBC1FC72BFE001B0601 /* MainViewController.xib */; };
+		E05EECC01FC73432001B0601 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECBF1FC73432001B0601 /* AppAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +32,19 @@
 		E05EEC871FC6FB18001B0601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E05EEC891FC6FB18001B0601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E05EEC971FC6FE5D001B0601 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		E05EEC9A1FC7048F001B0601 /* WebServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConfiguration.swift; sourceTree = "<group>"; };
+		E05EEC9C1FC70496001B0601 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		E05EEC9E1FC7049D001B0601 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		E05EECA01FC704A6001B0601 /* WebServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceAssembly.swift; sourceTree = "<group>"; };
+		E05EECA31FC705E5001B0601 /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
+		E05EECA41FC70CEE001B0601 /* MainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepository.swift; sourceTree = "<group>"; };
+		E05EECA61FC71E2E001B0601 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		E05EECA91FC71E58001B0601 /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
+		E05EECAF1FC71E86001B0601 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		E05EECB91FC7270F001B0601 /* ForecastSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastSection.swift; sourceTree = "<group>"; };
+		E05EECBB1FC72BFE001B0601 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E05EECBC1FC72BFE001B0601 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		E05EECBF1FC73432001B0601 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +77,12 @@
 		E05EEC7C1FC6FB18001B0601 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				E05EEC8F1FC6FB38001B0601 /* WeatherCore */,
+				E05EECBF1FC73432001B0601 /* AppAssembly.swift */,
 				E05EEC7D1FC6FB18001B0601 /* AppDelegate.swift */,
 				E05EEC841FC6FB18001B0601 /* Assets.xcassets */,
 				E05EEC861FC6FB18001B0601 /* LaunchScreen.storyboard */,
 				E05EEC891FC6FB18001B0601 /* Info.plist */,
+				E05EEC8F1FC6FB38001B0601 /* WeatherCore */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -64,6 +90,8 @@
 		E05EEC8F1FC6FB38001B0601 /* WeatherCore */ = {
 			isa = PBXGroup;
 			children = (
+				E05EECA81FC71E50001B0601 /* DI */,
+				E05EECA21FC7059F001B0601 /* Config */,
 				E05EEC991FC7032D001B0601 /* WebService */,
 				E05EEC951FC6FE48001B0601 /* Common */,
 				E05EEC901FC6FB41001B0601 /* Main */,
@@ -85,6 +113,7 @@
 		E05EEC911FC6FE29001B0601 /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				E05EECA61FC71E2E001B0601 /* MainAssembly.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -92,6 +121,9 @@
 		E05EEC921FC6FE2E001B0601 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E05EECAF1FC71E86001B0601 /* MainPresenter.swift */,
+				E05EECBB1FC72BFE001B0601 /* MainViewController.swift */,
+				E05EECBC1FC72BFE001B0601 /* MainViewController.xib */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -99,6 +131,7 @@
 		E05EEC931FC6FE37001B0601 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				E05EECA41FC70CEE001B0601 /* MainRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -106,6 +139,7 @@
 		E05EEC941FC6FE43001B0601 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				E05EECB91FC7270F001B0601 /* ForecastSection.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -129,8 +163,28 @@
 		E05EEC991FC7032D001B0601 /* WebService */ = {
 			isa = PBXGroup;
 			children = (
+				E05EEC9A1FC7048F001B0601 /* WebServiceConfiguration.swift */,
+				E05EEC9C1FC70496001B0601 /* Endpoint.swift */,
+				E05EEC9E1FC7049D001B0601 /* WebService.swift */,
+				E05EECA01FC704A6001B0601 /* WebServiceAssembly.swift */,
 			);
 			path = WebService;
+			sourceTree = "<group>";
+		};
+		E05EECA21FC7059F001B0601 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E05EECA31FC705E5001B0601 /* Keys.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		E05EECA81FC71E50001B0601 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				E05EECA91FC71E58001B0601 /* CoreAssembly.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E05EEC881FC6FB18001B0601 /* LaunchScreen.storyboard in Resources */,
+				E05EECBE1FC72BFE001B0601 /* MainViewController.xib in Resources */,
 				E05EEC851FC6FB18001B0601 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,8 +259,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05EECA51FC70CEE001B0601 /* MainRepository.swift in Sources */,
 				E05EEC981FC6FE5D001B0601 /* Forecast.swift in Sources */,
+				E05EECA71FC71E2E001B0601 /* MainAssembly.swift in Sources */,
+				E05EECC01FC73432001B0601 /* AppAssembly.swift in Sources */,
+				E05EECBD1FC72BFE001B0601 /* MainViewController.swift in Sources */,
+				E05EECAA1FC71E58001B0601 /* CoreAssembly.swift in Sources */,
+				E05EEC9B1FC7048F001B0601 /* WebServiceConfiguration.swift in Sources */,
+				E05EEC9D1FC70496001B0601 /* Endpoint.swift in Sources */,
+				E05EEC9F1FC7049D001B0601 /* WebService.swift in Sources */,
+				E05EECA11FC704A6001B0601 /* WebServiceAssembly.swift in Sources */,
+				E05EECB01FC71E86001B0601 /* MainPresenter.swift in Sources */,
 				E05EEC7E1FC6FB18001B0601 /* AppDelegate.swift in Sources */,
+				E05EECBA1FC7270F001B0601 /* ForecastSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
