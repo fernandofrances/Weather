@@ -6,12 +6,12 @@
 //  Copyright © 2017 Fernando Frances. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final internal class WebService {
     private let configuration: WebServiceConfiguration
     private let session = URLSession(configuration: .default)
-    private let baseURL = URL(string: "http://api.openweathermap.org/data/2.5/weather")!
+    private let baseURL = URL(string: "http://api.openweathermap.org")!
     private let decoder = JSONDecoder()
     
     init(configuration : WebServiceConfiguration){
@@ -21,7 +21,6 @@ final internal class WebService {
     func load(from endpoint: Endpoint, onSuccess: @escaping (Forecast) -> Void) {
         let decoder = self.decoder
         let request = endpoint.request(with: baseURL, adding: configuration.paramenters)
-        print("About to do the request")
         let task = session.dataTask(with: request.url!){ (data: Data?, response: URLResponse?, error: Error?) in
             OperationQueue.main.addOperation {
                 if(error == nil){
@@ -35,6 +34,20 @@ final internal class WebService {
             }
         }
         task.resume()
+    }
+    
+    func loadImage(from endpoint: Endpoint, onSuccess: @escaping (UIImage) -> Void){
+        let request = endpoint.request(with: baseURL, adding: [:])
+        let queue = OperationQueue()
+        queue.addOperation {
+            if let url = request.url,
+               let data = NSData(contentsOf: url),
+               let image = UIImage(data: data as Data){
+                OperationQueue.main.addOperation {
+                    onSuccess(image)
+                }
+            }
+        }
     }
     
 }

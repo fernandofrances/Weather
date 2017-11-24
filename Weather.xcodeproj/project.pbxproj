@@ -19,10 +19,11 @@
 		E05EECA71FC71E2E001B0601 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECA61FC71E2E001B0601 /* MainAssembly.swift */; };
 		E05EECAA1FC71E58001B0601 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECA91FC71E58001B0601 /* CoreAssembly.swift */; };
 		E05EECB01FC71E86001B0601 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECAF1FC71E86001B0601 /* MainPresenter.swift */; };
-		E05EECBA1FC7270F001B0601 /* ForecastSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECB91FC7270F001B0601 /* ForecastSection.swift */; };
 		E05EECBD1FC72BFE001B0601 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECBB1FC72BFE001B0601 /* MainViewController.swift */; };
 		E05EECBE1FC72BFE001B0601 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05EECBC1FC72BFE001B0601 /* MainViewController.xib */; };
 		E05EECC01FC73432001B0601 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECBF1FC73432001B0601 /* AppAssembly.swift */; };
+		E05EECC51FC74EDA001B0601 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECC41FC74EDA001B0601 /* ImageRepository.swift */; };
+		E05EECC71FC74EF4001B0601 /* ImageLoadingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EECC61FC74EF4001B0601 /* ImageLoadingAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,15 +37,15 @@
 		E05EEC9C1FC70496001B0601 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		E05EEC9E1FC7049D001B0601 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		E05EECA01FC704A6001B0601 /* WebServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceAssembly.swift; sourceTree = "<group>"; };
-		E05EECA31FC705E5001B0601 /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
 		E05EECA41FC70CEE001B0601 /* MainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepository.swift; sourceTree = "<group>"; };
 		E05EECA61FC71E2E001B0601 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		E05EECA91FC71E58001B0601 /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
 		E05EECAF1FC71E86001B0601 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
-		E05EECB91FC7270F001B0601 /* ForecastSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastSection.swift; sourceTree = "<group>"; };
 		E05EECBB1FC72BFE001B0601 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E05EECBC1FC72BFE001B0601 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		E05EECBF1FC73432001B0601 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		E05EECC41FC74EDA001B0601 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		E05EECC61FC74EF4001B0601 /* ImageLoadingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +91,8 @@
 		E05EEC8F1FC6FB38001B0601 /* WeatherCore */ = {
 			isa = PBXGroup;
 			children = (
+				E05EECC11FC74EAD001B0601 /* Image Loading */,
 				E05EECA81FC71E50001B0601 /* DI */,
-				E05EECA21FC7059F001B0601 /* Config */,
 				E05EEC991FC7032D001B0601 /* WebService */,
 				E05EEC951FC6FE48001B0601 /* Common */,
 				E05EEC901FC6FB41001B0601 /* Main */,
@@ -139,7 +140,6 @@
 		E05EEC941FC6FE43001B0601 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				E05EECB91FC7270F001B0601 /* ForecastSection.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -171,20 +171,21 @@
 			path = WebService;
 			sourceTree = "<group>";
 		};
-		E05EECA21FC7059F001B0601 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				E05EECA31FC705E5001B0601 /* Keys.xcconfig */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
 		E05EECA81FC71E50001B0601 /* DI */ = {
 			isa = PBXGroup;
 			children = (
 				E05EECA91FC71E58001B0601 /* CoreAssembly.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		E05EECC11FC74EAD001B0601 /* Image Loading */ = {
+			isa = PBXGroup;
+			children = (
+				E05EECC41FC74EDA001B0601 /* ImageRepository.swift */,
+				E05EECC61FC74EF4001B0601 /* ImageLoadingAssembly.swift */,
+			);
+			path = "Image Loading";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05EECC71FC74EF4001B0601 /* ImageLoadingAssembly.swift in Sources */,
 				E05EECA51FC70CEE001B0601 /* MainRepository.swift in Sources */,
 				E05EEC981FC6FE5D001B0601 /* Forecast.swift in Sources */,
 				E05EECA71FC71E2E001B0601 /* MainAssembly.swift in Sources */,
@@ -266,12 +268,12 @@
 				E05EECBD1FC72BFE001B0601 /* MainViewController.swift in Sources */,
 				E05EECAA1FC71E58001B0601 /* CoreAssembly.swift in Sources */,
 				E05EEC9B1FC7048F001B0601 /* WebServiceConfiguration.swift in Sources */,
+				E05EECC51FC74EDA001B0601 /* ImageRepository.swift in Sources */,
 				E05EEC9D1FC70496001B0601 /* Endpoint.swift in Sources */,
 				E05EEC9F1FC7049D001B0601 /* WebService.swift in Sources */,
 				E05EECA11FC704A6001B0601 /* WebServiceAssembly.swift in Sources */,
 				E05EECB01FC71E86001B0601 /* MainPresenter.swift in Sources */,
 				E05EEC7E1FC6FB18001B0601 /* AppDelegate.swift in Sources */,
-				E05EECBA1FC7270F001B0601 /* ForecastSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

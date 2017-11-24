@@ -11,10 +11,9 @@ import Foundation
 //According to the API Request
 struct Forecast: Decodable {
     struct Weather: Decodable{
-        let id: Int
         let main: String
         let description: String
-        let icon : String
+        var icon : String
     }
     struct Main: Decodable{
         let temp: Float
@@ -32,3 +31,4 @@ struct Forecast: Decodable {
     let wind: Wind
     let name: String
 }
+

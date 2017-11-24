@@ -14,6 +14,7 @@ internal struct WebServiceConfiguration {
     static let `default` =  WebServiceConfiguration(apiKey: Bundle(for: WebServiceConfiguration.webServiceConfig.self).infoDictionary?["API_KEY"] as? String ?? "")
     
     var paramenters: [String: String] {
-        return ["APPID": "6fe0a81d266871b689165efd5b884f59"]
+        return ["APPID": "6fe0a81d266871b689165efd5b884f59",
+                "units": "metric"]
     }
 }

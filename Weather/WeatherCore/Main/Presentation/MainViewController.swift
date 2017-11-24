@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var weatherIcon: UIImageView!
     @IBOutlet weak var weatherName: UILabel!
     @IBOutlet weak var weatherDescription: UILabel!
     
@@ -42,7 +43,6 @@ class MainViewController: UIViewController {
 extension MainViewController: UISearchBarDelegate{
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("Searching for text: \(searchBar.text ?? "No text")")
         presenter.loadForecast(city: searchBar.text ?? "")
     }
 
@@ -51,6 +51,10 @@ extension MainViewController: UISearchBarDelegate{
 extension MainViewController: MainView {
     func update(with forecast: Forecast) {
         weatherName.text = forecast.name
-        weatherDescription.text = "Temperature: \(Float(forecast.main.temp))"
+        weatherDescription.text = "\(forecast.weather[0].main): \(forecast.weather[0].description)"
+    }
+    
+    func update(with image: UIImage) {
+        weatherIcon.image = image
     }
 }

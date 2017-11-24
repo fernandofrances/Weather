@@ -16,7 +16,6 @@ final class MainRepository {
     
     func forecastForCity(city: String, onResults: @escaping (Forecast) -> Void) -> Void {
         webService.load(from: .forecastForCity(city: city)) { (forecast: Forecast) in
-            print(forecast)
             onResults(forecast)
         }
     }

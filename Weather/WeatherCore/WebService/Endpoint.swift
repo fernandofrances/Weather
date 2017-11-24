@@ -10,6 +10,7 @@ import Foundation
 
 internal enum Endpoint {
     case forecastForCity(city: String)
+    case imageForForecast(icon: String)
 }
 
 internal extension Endpoint {
@@ -38,13 +39,17 @@ private extension Endpoint {
         switch self {
         case .forecastForCity:
             return .get
+        case .imageForForecast:
+            return .get
         }
     }
     
     var path: String {
         switch self {
         case .forecastForCity:
-            return ""
+            return "/data/2.5/weather"
+        case .imageForForecast(let icon):
+            return "/img/w/\(icon)"
         }
     }
     
@@ -52,6 +57,8 @@ private extension Endpoint {
         switch self{
         case .forecastForCity(let city):
             return ["q":city]
+        case .imageForForecast:
+            return [:]
         }
     }
 }

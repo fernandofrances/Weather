@@ -20,10 +20,14 @@ final class MainAssembly {
     }
     
     func presenter() -> MainPresenter {
-        return MainPresenter(repository: repository())
+        return MainPresenter(repository: repository(),imageRepository: imageRepository())
     }
     
     func repository() -> MainRepository {
         return MainRepository(webService: webServiceAssembly.webService)
+    }
+    
+    func imageRepository() -> ImageRepository {
+        return ImageRepository(webService: webServiceAssembly.webService)
     }
 }
