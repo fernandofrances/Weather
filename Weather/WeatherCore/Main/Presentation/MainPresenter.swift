@@ -24,12 +24,18 @@ final class MainPresenter {
     }
     
     func didLoad() {
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationFromSearch(notification:)), name: NSNotification.Name(rawValue: "citySelected"), object: nil)
     }
     
 }
 
 extension MainPresenter {
+    
+    @objc func notificationFromSearch(notification: Notification){
+        let city = notification.object as! String
+        loadForecast(city: city)
+    }
+    
     func loadForecast(city: String) {
         repository.forecastForCity(city: city) { (forecast: Forecast) in
             self.view?.update(with: forecast)
@@ -39,3 +45,4 @@ extension MainPresenter {
         }
     }
 }
+

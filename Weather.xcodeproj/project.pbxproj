@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0210E801FC8870500F2B49A /* LastSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0210E7F1FC8870500F2B49A /* LastSearchViewController.swift */; };
+		E0210E821FC8871000F2B49A /* LastSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0210E811FC8871000F2B49A /* LastSearchPresenter.swift */; };
+		E0210E881FC8917400F2B49A /* SearchNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0210E871FC8917400F2B49A /* SearchNavigator.swift */; };
+		E0210E8A1FC893E400F2B49A /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0210E891FC893E400F2B49A /* SearchAssembly.swift */; };
 		E05EEC7E1FC6FB18001B0601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EEC7D1FC6FB18001B0601 /* AppDelegate.swift */; };
 		E05EEC851FC6FB18001B0601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05EEC841FC6FB18001B0601 /* Assets.xcassets */; };
 		E05EEC881FC6FB18001B0601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05EEC861FC6FB18001B0601 /* LaunchScreen.storyboard */; };
@@ -27,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0210E7F1FC8870500F2B49A /* LastSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSearchViewController.swift; sourceTree = "<group>"; };
+		E0210E811FC8871000F2B49A /* LastSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSearchPresenter.swift; sourceTree = "<group>"; };
+		E0210E871FC8917400F2B49A /* SearchNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigator.swift; sourceTree = "<group>"; };
+		E0210E891FC893E400F2B49A /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
 		E05EEC7A1FC6FB18001B0601 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05EEC7D1FC6FB18001B0601 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E05EEC841FC6FB18001B0601 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +67,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E0210E7A1FC8864500F2B49A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E0210E7E1FC886D500F2B49A /* Presentation */,
+				E0210E7D1FC886CB00F2B49A /* Navigators */,
+				E0210E7C1FC886C700F2B49A /* Repositories */,
+				E0210E7B1FC886C300F2B49A /* DI */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E0210E7B1FC886C300F2B49A /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				E0210E891FC893E400F2B49A /* SearchAssembly.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		E0210E7C1FC886C700F2B49A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E0210E7D1FC886CB00F2B49A /* Navigators */ = {
+			isa = PBXGroup;
+			children = (
+				E0210E871FC8917400F2B49A /* SearchNavigator.swift */,
+			);
+			path = Navigators;
+			sourceTree = "<group>";
+		};
+		E0210E7E1FC886D500F2B49A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E0210E7F1FC8870500F2B49A /* LastSearchViewController.swift */,
+				E0210E811FC8871000F2B49A /* LastSearchPresenter.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		E05EEC711FC6FB18001B0601 = {
 			isa = PBXGroup;
 			children = (
@@ -91,11 +142,12 @@
 		E05EEC8F1FC6FB38001B0601 /* WeatherCore */ = {
 			isa = PBXGroup;
 			children = (
-				E05EECC11FC74EAD001B0601 /* Image Loading */,
 				E05EECA81FC71E50001B0601 /* DI */,
-				E05EEC991FC7032D001B0601 /* WebService */,
 				E05EEC951FC6FE48001B0601 /* Common */,
 				E05EEC901FC6FB41001B0601 /* Main */,
+				E0210E7A1FC8864500F2B49A /* Search */,
+				E05EECC11FC74EAD001B0601 /* Image Loading */,
+				E05EEC991FC7032D001B0601 /* WebService */,
 			);
 			path = WeatherCore;
 			sourceTree = "<group>";
@@ -261,16 +313,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E05EECC71FC74EF4001B0601 /* ImageLoadingAssembly.swift in Sources */,
+				E0210E801FC8870500F2B49A /* LastSearchViewController.swift in Sources */,
 				E05EECA51FC70CEE001B0601 /* MainRepository.swift in Sources */,
 				E05EEC981FC6FE5D001B0601 /* Forecast.swift in Sources */,
 				E05EECA71FC71E2E001B0601 /* MainAssembly.swift in Sources */,
 				E05EECC01FC73432001B0601 /* AppAssembly.swift in Sources */,
+				E0210E821FC8871000F2B49A /* LastSearchPresenter.swift in Sources */,
 				E05EECBD1FC72BFE001B0601 /* MainViewController.swift in Sources */,
 				E05EECAA1FC71E58001B0601 /* CoreAssembly.swift in Sources */,
 				E05EEC9B1FC7048F001B0601 /* WebServiceConfiguration.swift in Sources */,
 				E05EECC51FC74EDA001B0601 /* ImageRepository.swift in Sources */,
 				E05EEC9D1FC70496001B0601 /* Endpoint.swift in Sources */,
 				E05EEC9F1FC7049D001B0601 /* WebService.swift in Sources */,
+				E0210E8A1FC893E400F2B49A /* SearchAssembly.swift in Sources */,
+				E0210E881FC8917400F2B49A /* SearchNavigator.swift in Sources */,
 				E05EECA11FC704A6001B0601 /* WebServiceAssembly.swift in Sources */,
 				E05EECB01FC71E86001B0601 /* MainPresenter.swift in Sources */,
 				E05EEC7E1FC6FB18001B0601 /* AppDelegate.swift in Sources */,

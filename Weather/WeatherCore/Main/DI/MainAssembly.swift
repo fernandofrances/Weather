@@ -10,13 +10,15 @@ import Foundation
 
 final class MainAssembly {
     private let webServiceAssembly: WebServiceAssembly
+    private let searchAssembly: SearchAssembly
     
-    init(webServiceAssembly: WebServiceAssembly){
+    init(webServiceAssembly: WebServiceAssembly, searchAssembly: SearchAssembly){
         self.webServiceAssembly = webServiceAssembly
+        self.searchAssembly = searchAssembly
     }
     
     public func viewController() -> MainViewController {
-        return MainViewController(presenter: presenter())
+        return MainViewController(presenter: presenter(),searchNavigator: searchNavigator())
     }
     
     func presenter() -> MainPresenter {
@@ -25,6 +27,10 @@ final class MainAssembly {
     
     func repository() -> MainRepository {
         return MainRepository(webService: webServiceAssembly.webService)
+    }
+    
+    func searchNavigator() -> SearchNavigator {
+        return searchAssembly.searchNavigator()
     }
     
     func imageRepository() -> ImageRepository {
