@@ -14,9 +14,13 @@ final class MainRepository {
         self.webService = webService
     }
     
-    func forecastForCity(city: String, onResults: @escaping (Forecast) -> Void) -> Void {
-        webService.load(from: .forecastForCity(city: city)) { (forecast: Forecast) in
+    func forecastForCity(city: String, onResults: @escaping (Forecast) -> Void, onError: @escaping (Error) -> Void, onWrongSearch: @escaping () -> Void) -> Void {
+        webService.load(from: .forecastForCity(city: city), onSuccess: { (forecast: Forecast) in
             onResults(forecast)
+        }, onError: { (error: Error?) in
+            onError(error!)
+        }) {
+            onWrongSearch()
         }
     }
 }

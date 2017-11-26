@@ -46,7 +46,28 @@ class MainViewController: UIViewController {
 
 
 extension MainViewController: MainView {
+    func conectionError() {
+        activityIndicator.stopAnimating()
+        let alert = UIAlertController(title: NSLocalizedString("Conection Failed", comment: ""), message: NSLocalizedString("Network conection failed, try again later", comment: ""), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func wrongSearch() {
+        activityIndicator.stopAnimating()
+        let alert = UIAlertController(title: NSLocalizedString("Wrong city name", comment: ""), message: NSLocalizedString("There's no information for the city you searched for, try another city or check if the spelling is correct", comment: ""), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    func searchStarted() {
+        activityIndicator.startAnimating()
+    }
+    
     func update(with forecast: Forecast) {
+        infoView.isHidden = false
+        activityIndicator.stopAnimating()
         weatherName.text = forecast.name
         weatherDescription.text = "\(forecast.weather[0].main) - \(forecast.weather[0].description)"
         temperature.text = ("Temperature: \(Float(forecast.main.temp))ºC ")

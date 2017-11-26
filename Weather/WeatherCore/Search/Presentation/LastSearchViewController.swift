@@ -86,16 +86,7 @@ extension LastSearchViewController: UISearchResultsUpdating {
 
 extension LastSearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-       //Save the text of the search to last searched cities in userDefaults
-        if var lastSearched = UserDefaults.standard.stringArray(forKey: "lastSearched"){
-            lastSearched.insert(searchBar.text ?? "", at: 0)
-            UserDefaults.standard.set(lastSearched, forKey: "lastSearched")
-        }else{
-            let array = [searchBar.text ?? ""]
-            UserDefaults.standard.set(array, forKey: "lastSearched")
-        }
-        print("Defaults: \(UserDefaults.standard.stringArray(forKey: "lastSearched") ?? ["no defaults"])")
-        self.dismissSearch(with: searchBar.text ?? "")
+        presenter.didSelect(city: searchBar.text ?? "")
     }
 }
 

@@ -18,18 +18,19 @@ final internal class WebService {
         self.configuration = configuration
     }
     
-    func load(from endpoint: Endpoint, onSuccess: @escaping (Forecast) -> Void) {
+    func load(from endpoint: Endpoint, onSuccess: @escaping (Forecast) -> Void, onError: @escaping (Error) -> Void, onWrongSearch: @escaping () -> Void) {
         let decoder = self.decoder
         let request = endpoint.request(with: baseURL, adding: configuration.paramenters)
         let task = session.dataTask(with: request.url!){ (data: Data?, response: URLResponse?, error: Error?) in
             OperationQueue.main.addOperation {
                 if(error == nil){
-                    print(String(data: data!, encoding: .utf8)!)
                     if let result = try? decoder.decode(Forecast.self, from: data!){
-                        print(result)
-                        onSuccess(result)}
+                        onSuccess(result)
+                    }else{
+                        onWrongSearch()
+                    }
                 }else{
-                    print(error!)
+                    onError(error!)
                 }
             }
         }
