@@ -20,8 +20,11 @@ final class LastSearchPresenter {
     weak var view: LastSearchView?
     
     func didLoad() {
-        let cities = ["Madrid","London","New York", "Moscow"]
-        self.view?.update(with: cities)
+        if let lastSearched = UserDefaults.standard.stringArray(forKey: "lastSearched"){
+            print("Last searched cities from Defaults, ready to show: \(lastSearched)")
+            self.view?.update(with: lastSearched)
+        }
+        
     }
     
     func didSelect(city: String) {
